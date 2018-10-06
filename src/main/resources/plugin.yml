@@ -1,0 +1,14 @@
+name: MCCT
+author: 615283
+description: Plugin to run the Minecraft Controlled Christmas Tree
+version: ${project.version}
+main: com.georlegacy.general.mcct.MCCTPlugin
+website: https://tree.dlljs.uk/livefeed/
+
+commands:
+  getpowerblockcreator:
+    description: Gives a Power Block Creator item
+
+permissions:
+  mcct.setup.getpowerblockcreator:
+    defualt: op
