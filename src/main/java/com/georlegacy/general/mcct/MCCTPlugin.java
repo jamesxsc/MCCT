@@ -20,6 +20,12 @@ public final class MCCTPlugin extends JavaPlugin {
         super.onEnable();
     }
 
+    @Override
+    public void onDisable() {
+        dataFileManager.saveDataStore();
+        super.onDisable();
+    }
+
     private static MCCTPlugin instance;
 
     public static MCCTPlugin getInstance() {
@@ -30,11 +36,6 @@ public final class MCCTPlugin extends JavaPlugin {
 
     public MCCTDataStore getDataStore() {
         return dataFileManager.getDataStore();
-    }
-
-    @Override
-    public void onDisable() {
-        super.onDisable();
     }
 
     private void registerCommands() {
