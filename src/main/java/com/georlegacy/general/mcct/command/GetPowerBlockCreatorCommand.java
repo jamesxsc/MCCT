@@ -21,12 +21,14 @@ public class GetPowerBlockCreatorCommand implements CommandExecutor {
         }
 
         boolean hasSpace = false;
-        for (ItemStack is : player.getInventory().getContents()) {
+        for (ItemStack is : player.getInventory().getStorageContents()) {
             if (is == null || is.getType().equals(Material.AIR)) {
                 hasSpace = true;
                 break;
             }
         }
+
+        System.out.println(hasSpace);
 
         if (!hasSpace) {
             player.sendMessage(ColorUtil.PREFIX + ColorUtil.color("&cYour inventory is full!"));

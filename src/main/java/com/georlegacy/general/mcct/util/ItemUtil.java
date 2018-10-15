@@ -24,7 +24,7 @@ public class ItemUtil {
                 ColorUtil.color("&emcct.setup.usepowerblockcreator"),
                 ColorUtil.color("&7&oto use")
         )));
-        powerBlockCreatorMeta.setLocalizedName("server_forest.mcct_domain.items_sub_unit.powerblockcreator");
+        powerBlockCreatorMeta.setLocalizedName(ForestNameUtil.powerBlockCreatorForestLevelName);
         powerBlockCreator.setItemMeta(powerBlockCreatorMeta);
 
         return powerBlockCreator;

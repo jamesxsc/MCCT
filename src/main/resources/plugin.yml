@@ -12,3 +12,5 @@ commands:
 permissions:
   mcct.setup.getpowerblockcreator:
     defualt: op
+  mcct.setup.usepowerblockcreator:
+    default: op
