@@ -13,6 +13,10 @@ public class GetPowerBlockCreatorCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        if (!(sender instanceof Player)) {
+            sender.sendMessage("Sorry! This command can only be used by players.");
+            return true;
+        }
         Player player = (Player) sender;
         if (!player.hasPermission("mcct.setup.getpowerblockcreator")) {
             player.sendMessage(ColorUtil.PREFIX + ColorUtil.color(
@@ -27,9 +31,6 @@ public class GetPowerBlockCreatorCommand implements CommandExecutor {
                 break;
             }
         }
-
-        System.out.println(hasSpace);
-
         if (!hasSpace) {
             player.sendMessage(ColorUtil.PREFIX + ColorUtil.color("&cYour inventory is full!"));
             return true;

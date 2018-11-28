@@ -1,6 +1,7 @@
 package com.georlegacy.general.mcct.util;
 
 import com.georlegacy.general.mcct.data.objects.entities.PowerBlock;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
 
@@ -14,7 +15,7 @@ public class LocationUtil {
     }
 
     public static boolean is(PowerBlock pb, Location toCompare) {
-        return is(pb.getX(), pb.getY(), pb.getZ(), pb.getWorld(),
+        return is(pb.getX(), pb.getY(), pb.getZ(), Bukkit.getWorld(pb.getWorldName()),
                 toCompare.getBlockX(), toCompare.getBlockY(), toCompare.getBlockZ(), toCompare.getWorld());
     }
 

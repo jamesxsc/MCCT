@@ -5,24 +5,18 @@ import org.bukkit.Material;
 
 import java.io.Serializable;
 
-public class PowerBlock implements Serializable {
+public class TreeOnTriggeredSignal implements Serializable {
 
-    public PowerBlock(Location l, Material type) {
+    public TreeOnTriggeredSignal(Location l) {
         this.x = l.getBlockX();
         this.y = l.getBlockY();
         this.z = l.getBlockZ();
         this.worldName = l.getWorld().getName();
-        this.type = type;
     }
 
     private final int x, y, z;
 
     private final String worldName;
-
-    private final Material type;
-
-
-    private transient long lastUse;
 
     public int getX() {
         return x;
@@ -38,18 +32,6 @@ public class PowerBlock implements Serializable {
 
     public String getWorldName() {
         return worldName;
-    }
-
-    public Material getType() {
-        return type;
-    }
-
-    public long getLastUse() {
-        return lastUse;
-    }
-
-    public void setLastUse(long unixTimeStamp) {
-        this.lastUse = unixTimeStamp;
     }
 
 }

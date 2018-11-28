@@ -19,6 +19,8 @@ public class ItemUtil {
                 ColorUtil.color("&2&oRight Click Any Block"),
                 ColorUtil.color("&2&oTo Create A Power Block"),
                 "",
+                ColorUtil.color("&2&oAnd Sneak To Remove"),
+                "",
                 ColorUtil.color("&c&oNote:"),
                 ColorUtil.color("&7&oYou must have the permission"),
                 ColorUtil.color("&emcct.setup.usepowerblockcreator"),

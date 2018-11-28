@@ -6,11 +6,21 @@ main: com.georlegacy.general.mcct.MCCTPlugin
 website: https://tree.dlljs.uk/livefeed/
 
 commands:
+  addtreeontriggeredsignal:
+    description: Turns the block you are looking at into a Tree On Triggered Signal
   getpowerblockcreator:
     description: Gives a Power Block Creator item
+  controltree:
+    description: Opens the GUI to control the tree
 
 permissions:
   mcct.setup.getpowerblockcreator:
     defualt: op
   mcct.setup.usepowerblockcreator:
+    default: op
+  mcct.setup.createtreeontriggeredsignal:
+    default: op
+  mcct.usage.controltree:
+    default: true
+  mcct.usage.controltree.overridepatternrelease:
     default: op
